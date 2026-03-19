@@ -1,53 +1,99 @@
-# Conversando por Voz 🎙️
+# 🎙️ Conversando por Voz
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LuGodoy/conversando-por-voz/blob/main/conversando_por_voz.ipynb)
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)
+![Google Colab](https://img.shields.io/badge/Colab-IDE-F9AB00?logo=googlecolab&logoColor=white)
+![Gemini](https://img.shields.io/badge/Gemini-AI-4285F4?logo=google&logoColor=white)<br>
+![Whisper](https://img.shields.io/badge/Whisper-STT-000000?logo=openai&logoColor=white)
+![gTTS](https://img.shields.io/badge/gTTS-TTS-FF6F00)
 
-Este projeto utiliza o Google Gemini e gTTS para criar uma interface de interação por voz, processando dados e transformando respostas de texto em áudio sintetizado.
+Projeto de interação por voz com IA generativa utilizando **Whisper**, **Google Gemini** e **gTTS**.  
+Permite enviar áudio, interpretar a fala e receber uma resposta também em áudio.
+
+---
+
+## ✨ Visão Geral
+
+Este notebook executa um fluxo completo de conversa por voz:
+
+1. 🎤 Grava o áudio do usuário  
+2. 🧠 Transcreve com Whisper  
+3. 🤖 Gera resposta com Google Gemini  
+4. 🔊 Converte a resposta em áudio  
 
 ---
 
 ## 🚀 Como Executar no Google Colab
 
-Siga os passos abaixo para testar o projeto diretamente no seu navegador:
+### 1. Baixar o notebook
 
-### 1. Clonar o Repositório
-Copie e cole o código abaixo em uma célula do Colab para baixar os arquivos necessários:
+1. No GitHub, abra o arquivo `conversando_por_voz.ipynb`  
+2. Clique em **Download raw file** (ícone de download)  
+3. Salve o arquivo no seu computador  
 
-```python
-# Clona o repositório
-!git clone https://github.com/LuGodoy/conversando-por-voz.git
+---
 
-# Entra na pasta do projeto
-%cd conversando-por-voz
+### 2. Abrir no Colab
 
-### 3. Instalar Dependências
-Execute a célula abaixo para instalar as bibliotecas necessárias (como gTTS e google-generativeai):
+- Acesse o Google Colab  
+- Vá em **Arquivo > Fazer upload de notebook**  
+- Selecione o arquivo `.ipynb`
 
-```python
+---
 
-!pip install gTTS google-generativeai
+### 3. Configurar sua API Key (Gemini)
+> **Obs.:** Se ainda não tem a `GOOGLE_API_KEY`, crie a sua gratuitamente no [Google AI Studio](https://aistudio.google.com/).
 
-```
+Para utilizar o modelo de IA:
 
-### 4. Configurar sua API Key
-Este projeto requer uma chave do Google Gemini. Para manter a segurança:
+1. No menu lateral esquerdo, clique no ícone de **🔑 Secrets**  
+2. Crie uma variável chamada: `GOOGLE_API_KEY`
+3. Cole sua chave da API  
+4. Ative a chave para o notebook  
 
-- No menu lateral esquerdo do Colab, clique no ícone de Chave (Secrets).
+---
 
-- Adicione uma nova chave com o nome GOOGLE_API_KEY.
+### 4. Executar o projeto
 
-- Ative a chave para este notebook.
+- Execute as células na ordem  
+- Autorize o uso do microfone (quando solicitado)  
+- Grave sua pergunta  e execute as celulas seguintes
+- Ouça a resposta gerada pela IA 🎧  
 
-### 🛠️ Funcionalidades
-- Processamento de Linguagem Natural: Integração com modelos Gemini.
+---
 
-- Conversão Texto-Voz: Utilização da biblioteca gTTS para sintetizar respostas em áudio.
+## 🧠 Tecnologias Utilizadas
 
-- Limpeza de Markdown: Scripts integrados para remover formatações (como asteriscos) antes da leitura por voz.
+- **Whisper (OpenAI)** — transcrição de áudio  
+- **Google Gemini** — geração de respostas  
+- **gTTS** — conversão de texto em voz  
+- **Python** — linguagem principal  
 
-### 👨‍💻 Autor
-Desenvolvido por Luciene (Lu).
-### O que foi personalizado:
-* **Link do Git:** [aqui](https://github.com/LuGodoy/conversando-por-voz.git)
-* **Dependências:** Adicionei as bibliotecas que o seu notebook utiliza (`gTTS` e `google-generativeai`).
-* **Destaque para Voz:** Incluí a seção sobre a limpeza de Markdown e síntese de voz, que é o núcleo do seu arquivo `.ipynb`.
+---
+
+## 🛠️ Funcionalidades
+
+- 🎤 Entrada de voz diretamente no navegador  
+- 🧠 Transcrição automática  
+- 🤖 Respostas inteligentes com IA  
+- 🔊 Resposta em áudio  
+- 🧹 Limpeza de texto para melhor leitura  
+
+---
+
+## ⚠️ Observações
+- Este projeto faz parte de um desafio DIO/Banco Bradesco 
+[Aqui](https://web.dio.me/project/conversando-por-voz-com-o-chatgpt-utilizando-whisper-openai-e-python/learning/91e3c941-0742-411a-aaef-0cf115cead00?back=/track/bradesco-genai-dados&tab=undefined&moduleId=undefined)
+
+- O projeto foi desenvolvido para rodar no Google Colab  
+- A gravação de áudio utiliza JavaScript integrado ao notebook  
+- É necessário permitir acesso ao microfone no navegador  
+
+---
+
+## 👩‍💻 Autora
+
+**Luciene**  
+AI Agents • Data Science • Software Engineering • Matemática  
+
+
+
